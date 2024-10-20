@@ -4,6 +4,11 @@ import { useEffect, useRef, useState } from 'react';
 import Home from './UI/pages/Home';
 
 
+// primary color: #e79062
+// secondary color: #f6f6f6
+
+
+
 const { width, height } = Dimensions.get('window');
 
 export default function App() {
@@ -13,7 +18,7 @@ export default function App() {
   useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: 0,
-      duration: 1500,
+      duration: 2500,
       useNativeDriver: true
     }).start(({finished}) => {
       setVisibility('none');
@@ -35,19 +40,19 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#f6f6f6',
     alignItems: 'center',
     justifyContent: 'center',
     position: 'relative'
   },
   welcomeMsg: {
-    color: '#000',
+    color: '#fff',
     fontWeight: 'bold',
     fontSize: 25
   },
   innerContainer: {
     position: 'absolute',
-    backgroundColor: '#fff',
+    backgroundColor: '#f6f6f6',
     width: width,
     height: height,
     display: 'flex',

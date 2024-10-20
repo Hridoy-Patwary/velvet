@@ -1,5 +1,7 @@
 import React from 'react'
 import { StyleSheet, View, Text } from 'react-native'
+import Nav from '../components/nav'
+import Collections from '../components/Collections'
 
 
 
@@ -8,7 +10,8 @@ export default function Home(props) {
 
     return (
         <View style={[homeStyle.outer, {width: x.w, height: x.h}]} >
-            <Text style={homeStyle.middleText}>Welcome to the home page</Text>
+            <Nav />
+            <Collections widthAndHeight={x} />
         </View>
     )
 }
@@ -16,7 +19,7 @@ export default function Home(props) {
 
 const homeStyle = StyleSheet.create({
     outer: {
-        backgroundColor: '#3334',
+        backgroundColor: '#f6f6f6',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -24,6 +27,7 @@ const homeStyle = StyleSheet.create({
     },
     middleText: {
         fontSize: 20,
-        fontWeight: 600
+        fontWeight: 600,
+        color: '#000'
     }
 })
